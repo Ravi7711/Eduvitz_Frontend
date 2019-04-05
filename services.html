@@ -1,0 +1,390 @@
+
+
+
+<!doctype html>
+<html>
+<head>
+<title>Contact US</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="chat11.css">
+<!--Start of Tawk.to Script-->
+<script type="text/javascript" src="../js/tawk.js">
+</script>
+<!--End of Tawk.to Script-->
+ <style type="text/css">
+		
+    </style>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
+<style>
+
+
+
+
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif ;font-color:white;
+}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+	background-image: url("images/busy-1972166_960_720.jpg");
+    min-height: 100%;
+	width :100%;
+	background-color:powderblue;
+
+	  
+	
+
+
+
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("C:\Users\Admin\Desktop\praveen\Eduvitz\images/about1.jpg");
+    min-height: 100%;
+	width :100%;
+	  background-color: black;
+}
+
+.body11{
+	text-align:center;
+	margin-top:10%;
+	text-decoration:none;
+}
+
+.body11:hover{
+	text-decoration:none;
+}
+.body22{
+
+}
+
+
+	.navbar-default {
+		background-color:transparent;
+		border-color:transparent;
+	}
+	.navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+       margin: 7.5px 50px 7.5px -15px
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+   
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+	
+	.header{
+	height:100px;
+	background-color:lightblue;
+	}
+	
+	::selection {
+    background: #1ccdca;
+    color: #fff;
+    text-shadow: none;
+}
+
+.copyright{
+	height:auto;
+	color:black;
+	}
+	
+.location{
+height:auto;
+width:100%;
+}
+.navbar-header{
+    top: 0;
+    z-index: 30;
+
+</style>
+
+
+<script type="text/javascript">
+
+function validateName() {
+
+  var name = document.getElementById('contact-name').value;
+
+  if(name.length == 0) {
+
+    producePrompt('Name is required', 'name-error' , 'red')
+    return false;
+
+  }
+
+  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+
+    producePrompt('First and last name, please.','name-error', 'red');
+    return false;
+
+  }
+
+  producePrompt('Valid', 'name-error', 'green');
+  return true;
+
+}
+
+function validatePhone() {
+
+  var phone = document.getElementById('contact-phone').value;
+
+    if(phone.length == 0) {
+      producePrompt('Phone number is required.', 'phone-error', 'red');
+      return false;
+    }
+
+    if(phone.length != 10) {
+      producePrompt('Include area code.', 'phone-error', 'red');
+      return false;
+    }
+
+    if(!phone.match(/^[0-9]{10}$/)) {
+      producePrompt('Only digits, please.' ,'phone-error', 'red');
+      return false;
+    }
+
+    producePrompt('Valid', 'phone-error', 'green');
+    return true;
+
+}
+
+function validateEmail () {
+
+  var email = document.getElementById('contact-email').value;
+
+  if(email.length == 0) {
+
+    producePrompt('Email Invalid','email-error', 'red');
+    return false;
+
+  }
+
+  if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+
+    producePrompt('Email Invalid', 'email-error', 'red');
+    return false;
+
+  }
+
+  producePrompt('Valid', 'email-error', 'green');
+  return true;
+
+}
+
+
+
+function validateForm() {
+  if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage()) {
+    jsShow('submit-error');
+    producePrompt('Please fix errors to submit.', 'submit-error', 'red');
+    setTimeout(function(){jsHide('submit-error');}, 2000);
+  }
+  else {
+
+  }
+}
+
+function jsShow(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function jsHide(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+
+
+
+function producePrompt(message, promptLocation, color) {
+
+  document.getElementById(promptLocation).innerHTML = message;
+  document.getElementById(promptLocation).style.color = color;
+
+
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+		
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header navbar-fixed-top">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+							</button>
+					<a class="navbar-brand" href="../index.html"><img src="images/eduvitz_logo.png" alt="no image found" style="width:120px;height:90px; margin-top:-14px;"></a>
+						</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" style="position: absolute;top:50px;color: rgb(255, 255, 255);z-index: 9999; right: 0px !important;" id="bs-example-navbar-collapse-1">
+					  
+						<ul class="nav navbar-nav navbar-right" >
+								<a href="home.html"> <li><font size="5" color="black">Home</font></li>
+								</a>
+								
+								<a href="about.html"> <li><font size="5"color="black">About us</font></li></a>
+								
+								<a href="gett.php"> <li><font size="5" color="black">Courses</font></li></a>
+								
+								
+								<a href="project.html"> <li><font size="5" color="black">Projects</font></li></a>
+								
+								<a href="services.html"> <li><font size="5" color="black">Services</font></li></a>
+								
+								<a href="gallery.html"> <li><font size="5" color="black">Gallery</font></li></a>
+								
+									
+								<a href="indexlms.html"> <li><font size="5" color="black">LMS Project</font></li></a>
+								
+								<a href="contact.html"> <li><font size="5" color="black">Contact US</font></li></a>
+							</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+			
+		</div>
+			
+			
+  
+		
+				</div></div></div><br><br>
+				
+		<!--		<button class="btn btn-secondary pull-right btn btn-danger"><a href="index.html"><img src="images/e18.jpg" width="100" height="200"></a></button>
+       
+	   -->
+	   
+	   <!-- Header -->
+	   <br>
+
+<center>
+<span class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center"><strong>Our Services</strong></h3>
+  <br><br>
+  
+  <span class="w3-row-padding w3-center" style="margin-top:64px">
+      
+      <span class="w3-quarter">
+    <i class="fa fa-clone" style="font-size:48px;color:red"></i>
+      <p class="w3-large"><h4>LMS project</h4></p><br>
+      
+    </span>
+    <span class="w3-quarter">
+     <i class="fa fa-file-powerpoint-o" style="font-size:48px;color:red"></i>
+      <p class="w3-large"><h4>Project Management</h4></p><br>
+     
+    </span>
+    <span class="w3-quarter">
+     <i class="fa fa-cube" style="font-size:48px;color:red"></i>
+      <p class="w3-large"><h4>Training</h4></p><br>
+      
+    </span>
+    <span class="w3-quarter">
+     <i class="fa fa-diamond" style="font-size:48px;color:red"></i>
+      <p class="w3-large"><h4>Consultancy</h4></p><br>
+      
+    </span>
+ 
+    <span class="w3-quarter">
+     <i class="fa fa-envelope-open-o" style="font-size:48px;color:red"></i>
+      <p class="w3-large"><h4>Internships</h4></p>
+      
+    </span>
+  </span>
+</span> 
+	</center>
+	
+	
+<script>
+
+$(document).on('click', '.panel-heading span.icon_minim', function (e) {
+    var $this = $(this);
+    if (!$this.hasClass('panel-collapsed')) {
+        $this.parents('.panel').find('.panel-body').slideUp();
+        $this.addClass('panel-collapsed');
+        $this.removeClass('glyphicon-minus').addClass('glyphicon-plus');
+    } else {
+        $this.parents('.panel').find('.panel-body').slideDown();
+        $this.removeClass('panel-collapsed');
+        $this.removeClass('glyphicon-plus').addClass('glyphicon-minus');
+    }
+});
+$(document).on('focus', '.panel-footer input.chat_input', function (e) {
+    var $this = $(this);
+    if ($('#minim_chat_window').hasClass('panel-collapsed')) {
+        $this.parents('.panel').find('.panel-body').slideDown();
+        $('#minim_chat_window').removeClass('panel-collapsed');
+        $('#minim_chat_window').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+    }
+});
+$(document).on('click', '#new_chat', function (e) {
+    var size = $( ".chat-window:last-child" ).css("margin-left");
+     size_total = parseInt(size) + 400;
+    alert(size_total);
+    var clone = $( "#chat_window_1" ).clone().appendTo( ".container" );
+    clone.css("margin-left", size_total);
+});
+$(document).on('click', '.icon_close', function (e) {
+    //$(this).parent().parent().parent().parent().remove();
+    $( "#chat_window_1" ).remove();
+});
+
+
+
+
+$('.glyphicon-facetime-video').click(function(event) {
+
+      window.open($('#popup_video').attr("href"), "popupWindow", "width=800,height=800,scrollbars=yes");
+      return false;
+  });
+
+</script>
+	<!-- Map Script-->
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+
