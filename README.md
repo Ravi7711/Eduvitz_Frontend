@@ -1,2 +1,2 @@
 # Eduvitz_Frontend
-Eduvitz Technology
+Eduvitz Technologies
