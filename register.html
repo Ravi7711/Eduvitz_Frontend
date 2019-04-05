@@ -1,0 +1,522 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+<link rel="stylesheet" href="IMAGES/styles.css" type="text/css" />
+<title>Eduvitz Technologies</title>
+<style type="text/css">
+
+body{
+	
+	background-image:url(images/blue.jpg);background-size:cover;
+	
+}
+table{
+background-image:url(images/blue.jpg);background-size:cover;
+}
+
+
+
+</style>
+<script type="text/javascript" >
+
+function validateName() {
+
+  var name = document.getElementById('contact-name').value;
+
+  if(name.length == 0) {
+
+    producePrompt('Name is required', 'name-error' , 'red')
+    return false;
+
+  }
+
+  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+
+    producePrompt('First and last name, please.','name-error', 'red');
+    return false;
+
+  }
+
+  producePrompt('Valid', 'name-error', 'green');
+  return true;
+
+}
+
+function validatePhone() {
+
+  var phone = document.getElementById('contact-phone').value;
+
+    if(phone.length == 0) {
+      producePrompt('Phone number is required.', 'phone-error', 'red');
+      return false;
+    }
+
+    if(phone.length != 10) {
+      producePrompt('Include area code.', 'phone-error', 'red');
+      return false;
+    }
+
+    if(!phone.match(/^[0-9]{10}$/)) {
+      producePrompt('Only digits, please.' ,'phone-error', 'red');
+      return false;
+    }
+
+    producePrompt('Valid', 'phone-error', 'green');
+    return true;
+
+}
+
+function validateEmail () {
+
+  var email = document.getElementById('contact-email').value;
+
+  if(email.length == 0) {
+
+    producePrompt('Email Invalid','email-error', 'red');
+    return false;
+
+  }
+
+  if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+
+    producePrompt('Email Invalid', 'email-error', 'red');
+    return false;
+
+  }
+
+  producePrompt('Valid', 'email-error', 'green');
+  return true;
+
+}
+
+
+
+function validateForm() {
+  if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage()) {
+    jsShow('submit-error');
+    producePrompt('Please fix errors to submit.', 'submit-error', 'red');
+    setTimeout(function(){jsHide('submit-error');}, 2000);
+  }
+  else {
+
+  }
+}
+
+function jsShow(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function jsHide(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+
+
+
+function producePrompt(message, promptLocation, color) {
+
+  document.getElementById(promptLocation).innerHTML = message;
+  document.getElementById(promptLocation).style.color = color;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+
+<body>
+
+<table width="995" height="700" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+  
+    <td align="center" valign="top"><table width="790" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="10" valign="top" background="IMAGES/side.gif" style="background-repeat:repeat-y;" >&nbsp;</td>
+          <td width="770"><table width="770" height="700" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td valign="top" bgcolor="#FFFFFF">
+			  				<table width="770" height="20" border="0" cellpadding="0" cellspacing="0">
+							
+							
+							
+							
+							
+               
+              </table>
+              <table width="770" height="140" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    
+				
+				<td width="100"  align="center" valign="middle">
+					<img src="images/eduvitz_logo.png" border="0" width="200" class="center"/>
+					</td>
+                    <td width="570" >
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="570" height="140">
+                        <param name="movie" value="/durga.swf" />
+                        <param name="quality" value="high" />
+                        
+                    </object></td>
+                  </tr>
+                </table>
+                  <table width="770" height="20" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td bgcolor="#87BE1B">
+					  
+					  </td>
+                    </tr>
+                    <tr><td valign='middle' height='20' align='center'>
+                    <center>
+                    
+                    </center>
+                    </td></tr>
+            		</table>
+			  </td>
+			</tr>
+			<tr>
+			  <td>
+                <table width="770" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="200" align="center" valign="top">
+					  <table width='200' height='450' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='50'>
+							<table width='200' height='50' border='0' cellpadding='0' cellspacing='0'>
+                                <tr>
+                                  <td align='center' background='IMAGES/button.gif' height='50' ><a href='home.html' class='but-text'><button class="btn btn-primary btn-lg btn-block">  HOME</button></a></td>
+                                </tr>
+								<tr>
+                                <td align='center' background='IMAGES/button.gif' height='50' ><a href='about.html' class='but-text'><button class="btn btn-primary btn-lg btn-block">About Us</button></a></td>
+                              </tr>
+                            </table></td>
+                          </tr>
+						  
+                          <tr>
+                            <td height='50'><table width='200' height='100' border='0' cellpadding='0' cellspacing='0'>
+                              <tr>
+                                <td align='center' background='IMAGES/button.gif' ><a href='project.html' class='but-text'><button class="btn btn-primary btn-lg btn-block">Academic Projects</button></a></td>
+                              </tr>
+                              <tr>
+                                <td align='center' background='IMAGES/button.gif' ><a href='contact.html' class='but-text'><button class="btn btn-primary btn-lg btn-block">Contact Us</button></a></td>
+                              </tr>
+                            </table></td>
+                          </tr>
+                          <tr>
+                            <td height='200' align='center' valign='top' class='head-text'>
+							  </td>
+                          </tr>
+                      </table>
+                      </td>
+                      <td width="390" valign="top" align="center"  >
+                                             
+                      
+                      	<table width="390" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                           	<td height="35" align="center" class="head-text">REGISTRATION FORM  </td>
+                          	</tr>
+                           	<tr>
+                            <td  valign="top" class="nor-text" align="center"><br />
+                        
+                        
+                      		  
+                       	    <form id="reg_form" name="reg_form" action="index2.php" method="POST">
+                              <table width="380" border="0" align="center" cellpadding="0" cellspacing="0">
+                              <tr>
+                          	<td valign="middle" align="center" colspan="2">
+                          	<div style="width:350px;height:35px;" align="center">
+                          	<span style="font-family:verdana; font-size:12px">
+							
+                          	Please provide your information. Our supporting team will contact you soon to provide full information.<span>   </div>           </td>
+
+							
+                          	</tr>
+                              <tr>
+                                <td style="height:35px"><strong>*Name:</strong></td>
+                                <td width="230px">
+								<div class="col-sm-10">
+								<input type="text" class="form-control" id="contact-name" placeholder="Full Name" name="name" onKeyUp='validateName()'  onBlur='validateName()' required />
+								 <span class='error-message' id='name-error'></span>
+					  </div>
+								</td>
+                              </tr>
+                               <tr>
+                                <td style="height:35px"><strong>*E-mail ID:</strong></td>
+                                <td><div class="col-sm-10">          
+						<input type="email" class="form-control" id="contact-email" placeholder="Email" name="email" onKeyUp='validateEmail()'onBlur='validateEmail()' required >
+					  <span class='error-message' id='email-error'></span>
+					  </div></td>
+                              </tr>
+                             
+                              <tr>
+                                <td style="height:35px"><strong>*Phone. No:</strong></td>
+                                <td><div class="col-sm-10">          
+						<input type="text" class="form-control" id="contact-phone" placeholder="Phone no" name="mobile" onKeyUp='validatePhone()' onBlur='validatePhone()' required>
+					    <span class='error-message' id='phone-error'></span>
+					  </div></td>
+                              </tr>
+                              <tr>
+                              <td colspan="2"> <hr></td>
+                              <tr>
+                              
+                              <tr>
+                                                <td>
+                                                <strong>Current Status:</strong>
+                                                </td>
+                                                <td>
+                                                <input type="radio" name="current" id="current[]" value="Student"><label >Student</label><br>
+                                                <input type="radio" name="current" id="current[]" value="Employed"><label >Employed</label><br>
+                                                <input type="radio" name="current" id="current[]" value="Un-Employed/Job Seeker"><label >Un-Employed/Job Seeker</label>
+                                                </td>
+                                              
+                              </tr>
+                              <tr>
+                              <td colspan="2"> <hr></td>
+                              <tr>
+                              <tr>
+                                 <td align="left">
+                                 <strong>Courses Interested:</strong>
+                                 </td>
+                                 <td align="left">
+                                 <div id="dd" name="dd" style="float:left; width:120px; padding:0px">
+                                 <input type="checkbox" name="cname" id="SCJP" value="SCJP"><label for="SCJP">C Language</label><br>
+                                 <input type="checkbox" name="C++" id="SCWCD" value="SCWCD"><label for="SCWCD">C++</label><br>
+                                 <input type="checkbox" name="CORE_JAVA" id="CORE_JAVA" value="CORE_JAVA"><label for="CORE_JAVA">CORE JAVA</label><br>
+                                 <input type="checkbox" name="ADV_JAVA" id="ADV_JAVA" value="ADV_JAVA"><label for="ADV_JAVA">ADV.JAVA</label><br>
+                                 <input type="checkbox" name="Oracle" id="STRUTS" value="STRUTS"><label for="STRUTS">Oracle</label><br>
+                                 <input type="checkbox" name="SPRING" id="SPRING" value="SPRING"><label for="SPRING">SPRING</label><br>
+                                 <input type="checkbox" name="Hibernate" id="Collections" value="Collections"><label for="Collections">Hibernate</label>
+                                </div >
+                                
+                                 
+                                 <input type="checkbox" name="Angular js" id="EJB" value="EJB"><label for="EJB">Angular js</label><br>
+								 
+								 
+					
+                                 <input type="checkbox" name="Python" id="AJAX" value="AJAX"><label for="AJAX">Python</label><br>
+                                 <input type="checkbox" name="RPA" id="XML" value="XML"><label for="XML">RPA</label><br>
+                                 <input type="checkbox" name="DevOps" id="WEB_SERVICES" value="WEB_SERVICES"><label for="WEB_SERVICES">DevOps</label><br>
+                                 
+                                 <div id="dd" name="dd">
+                                 
+                                 <br><input type="checkbox" name="IOT" id="WebLogic" value="WebLogic"><label for="WebLogic">IOT</label>
+                                  <br> <input type="checkbox" name="Data Science" id="CRT" value="CRT"><label for="CRT">Data Science</label>
+								  <br> <input type="checkbox" name=".net" id="C-Language" value="C-Language"><label for="C-Language">.NET</label>
+								  <br> <input type="checkbox" name="Unix" id="Unix" value="Unix"><label for="Unix">Unix</label>
+                                  <br> 
+								  <input type="checkbox" name="Machine Learning" id="Bank Pos" value="Bank Pos"><label for="BankPos">Machine Learning</label>
+                                  <br> 
+                                    
+                                 
+                                </div>
+                                <br>
+                                 
+                                 </td>
+                              </tr>
+                              <tr>
+                              <td colspan="2"> <hr></td>
+                              <tr>
+                              <tr>
+                                  <td colspan="2" align="left">
+                                  <strong>Preferred Joining Date:</strong>
+                                  
+                                <input type="text" id="date" name="pdate">
+                                </td>
+                                
+                              </tr>
+                              <tr>
+                                 <td align="left" style="height:35px">
+                                 
+                                 <strong>Preferred Timings:</strong>
+                                 </td> 
+                                 <td align="left">                              
+                                 &nbsp;&nbsp;&nbsp;<input type="text" name="ptime" id="time">
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="middle" style="height:35px">
+                                 <div style="float:left">
+                                 <strong>Additional Details:</strong>
+                                 </div>
+                                 </td>
+                                 <td align="left">&nbsp;&nbsp;
+                                 <textarea name="comments" id="desc" cols="25" rows="4" style="direction:ltr"></textarea>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="2" >&nbsp;
+                                 
+                                 </td>
+                              </tr>
+                              <tr>
+							  
+                                <td>&nbsp;</td>
+                                <td align="center">
+                                  <input type="submit" name="submit" value="Submit" />
+                         
+                                
+								
+								
+								
+								
+                                </td>
+                              </tr>
+				
+                            </table>
+                            </form>
+                                                        
+                            
+                                                       
+                            </td>
+                          </tr>
+                      </table>
+                      </td>
+                      <td width="180" height="400" align="center" valign="top"><table width="180" height="400" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td align="center" valign="top">
+							<table width="170" height="450" border="0" cellpadding="0" cellspacing="0">
+                                
+								<tr>
+                                <td height="40" align="center" background="IMAGES/side-but.gif"><a href="#" class="but-text"><button class="btn btn-primary btn-lg btn-block">REGISTRATION</button></a> </td>
+                              </tr>
+				 			
+
+
+
+
+							<tr>
+                                <td height="40" align="center" background="IMAGES/side-but.gif"><a href="edutivzzz/coursecontentpdf/AWS.pdf" class="but-text"><button class="btn btn-primary btn-lg btn-block">AWS</button></a></td>
+                              </tr>
+							  
+							  <tr>
+                                <td height="40" align="center" background="IMAGES/side-but.gif"><a href="edutivzzz/coursecontentpdf/Data_Science.pdf" class="but-text"><button class="btn btn-primary btn-lg btn-block">Data Science</button></a></td>
+                              </tr>
+							  
+							  <tr>
+                                <td height="40" align="center" background="IMAGES/side-but.gif"><a href="edutivzzz/coursecontentpdf/Python.pdf" class="but-text"><button class="btn btn-primary btn-lg btn-block">Python</button></a></td>
+                              </tr>
+							  
+							  		
+							  
+                              
+                              <tr>
+                                <td height="40" align="center" background="IMAGES/side-but.gif"><a href="edutivzzz/coursecontentpdf/Core.pdf" class="but-text"><button class="btn btn-primary btn-lg btn-block">CORE JAVA</button></a></td>
+                              </tr>
+                              <tr>
+                                <td height="40" align="center" background="IMAGES/side-but.gif"><a href="edutivzzz/coursecontentpdf/ADV_java.pdf" class="but-text"><button class="btn btn-primary btn-lg btn-block">ADV.JAVA</button></a> </td>
+                              </tr>
+                              <tr>
+                                <td height="40" align="center" background="IMAGES/side-but.gif"><a href="edutivzzz/coursecontentpdf/Spring.pdf" class="but-text"><button class="btn btn-primary btn-lg btn-block">SPRING</button></a> </td>
+                              </tr>
+                              <tr>
+                                <td height="40" align="center" background="IMAGES/side-but.gif"><a href="edutivzzz/coursecontentpdf/Hibernate.pdf" class="but-text"><button class="btn btn-primary btn-lg btn-block">HIBERNATE</button></a> </td>
+                              </tr>
+                              
+							  
+							  
+							   <tr>
+							   <td>
+							   <br>
+							   <center>
+							 
+							   </center>
+							   </td>
+							   <tr>
+							   <td>
+							   <!-- Begin: AdBrite, Generated: 2009-03-23 22:41:59  -->
+<!-- End: AdBrite -->
+							   </td>
+							   
+							   </tr>
+							   </tr>
+							   
+							   
+							   <tr>
+							   <td>
+							   
+							   
+							   <!--Google ads-->
+							   
+							   <script type="text/javascript"><!--
+google_ad_client = "pub-6156263165775778";
+/* 160x600, created 9/30/10 */
+google_ad_slot = "5095227269";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<!--End Of Google Ads-->
+							   </td>
+							   </tr>
+							  
+                            </table>
+							</td>
+                          </tr>
+                      </table></td>
+                    </tr>
+                  </table>
+               <center>
+
+</center>
+<table width="770" height="50" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center"><span class="li-text"><a href="home.html" class="li-text">Home</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="about.html" class="li-text">About Us</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="contact.html" class="li-text">Contact Us</a><br />
+                        <span class="nor-text1"><a href="http://www.eduvitz.co.in" style="text-decoration:none;">www.eduvitz.co.in</a> </span></td>
+                  </tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6827349-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+			   </td>
+            </tr>
+          </table></td>
+          <td width="10" valign="top" background="IMAGES/side1.gif" style="background-repeat:repeat-y;">&nbsp;</td>
+          <td valign='top'>
+<table width="100">
+<tr>
+<td>
+</td>
+</tr>
+</table>
+
+</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+
+					
+</body>
+</html>
