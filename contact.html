@@ -1,0 +1,871 @@
+
+
+<!doctype html>
+<html>
+<head>
+<title>Contact US</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="chat11.css">
+<!--Start of Tawk.to Script-->
+<script type="text/javascript" src="../js/tawk.js">
+</script>
+<!--End of Tawk.to Script-->
+ <style type="text/css">
+		.page{float:left; width:100%;}
+
+.col-md-2, .col-md-10{
+    padding:0;
+}
+.panel{
+    margin-bottom: 0px;
+width:100%;
+}
+.chat-window{
+    bottom:0;
+    position:fixed;
+    float:right;
+    margin-left:10px;
+right:0;
+}
+.chat-window > div > .panel{
+    border-radius: 5px 5px 0 0;
+}
+.icon_minim{
+    padding:2px 10px;
+}
+.msg_container_base{
+  background: #e5e5e5;
+  margin: 0;
+  padding: 0;
+  max-height:300px;
+  overflow-x:hidden;
+}
+.top-bar {
+  background: #666;
+  color: white;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.msg_receive{
+    padding-left:0;
+    margin-left:0;
+}
+.msg_sent{
+    padding-bottom:20px !important;
+    margin-right:0;
+}
+.messages {
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-width:100%;
+}
+.messages > p {
+    font-size: 13px;
+    margin: 0 0 0.2rem 0;
+  }
+.messages > time {
+    font-size: 11px;
+    color: #ccc;
+}
+.msg_container {
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+}
+img {
+    display: block;
+    width: 100%;
+}
+.avatar {
+    position: relative;
+}
+.base_receive > .avatar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid #FFF;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.base_sent {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.base_sent > .avatar:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid white;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    box-shadow: 1px 1px 2px rgba(black, 0.2); 
+
+.msg_sent > time{
+    float: right;
+}
+
+
+.msg_container_base{padding:0px !important;}
+
+.msg_container_base::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.msg_container_base::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.msg_container_base::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.btn-group.dropup{
+    position:fixed;
+    left:0px;
+    bottom:0;
+}
+
+.panel-footer { padding:0px !important;}
+
+.chat_box{float:left !important; width:85% !important; border:none; border-radius:0px;}
+
+    </style>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
+<style>
+
+*{
+margin:0px;
+}
+
+.header1{
+	height:auto;
+	background-color:white;
+	display:inline;
+	float:left;
+}
+
+
+.imglogo{
+	height:100px;
+	width:200px;
+	padding-left:5%;
+}
+
+#menu{
+	height:auto;
+	width:auto;
+	float:right;
+	padding-right:5%;
+}
+
+.header2{
+	margin-top:100px;
+	width:100%;
+	height:auto;
+	background-image:url(images/e18.jpg);background-size:cover;
+	color:white;
+
+}
+
+.head1{
+	margin-top:3%;
+	padding-left:10%;
+}
+
+.head2{
+	margin-top:2%;
+	padding-left:15%;
+}
+
+.body1{
+	
+	background-image:url(images/blue.jpg);background-size:cover;
+	
+}
+
+.body11{
+	text-align:center;
+	margin-top:10%;
+	text-decoration:none;
+}
+
+.body11:hover{
+	text-decoration:none;
+}
+.body22{
+
+}
+
+.location{
+	width:100%;
+	height:500px;
+	background-color:#B587E3;
+}
+
+.footer{
+	background-color:black;
+	color:white;
+}
+
+/**********  floating social icons  *******/
+.social {
+  position: fixed;
+  top: 40%;
+  z-index:1;
+}
+.social ul {
+  padding: 0px;
+  -webkit-transform: translate(-260px, 0);
+  -moz-transform: translate(-260px, 0);
+  -ms-transform: translate(-260px, 0);
+  -o-transform: translate(-260px, 0);
+  transform: translate(-260px, 0);
+}
+.social ul li {
+  display: block;
+  margin: 5px;
+  background-color:#33FFEC;
+  width: 270px;
+  text-align: right;
+  padding: 10px;
+  -webkit-border-radius: 0 30px 30px 0;
+  -moz-border-radius: 0 30px 30px 0;
+  border-radius: 0 30px 30px 0;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li a{
+	font-size:25px;
+	}
+.social ul li:hover {
+  -webkit-transform: translate(110px, 0);
+  -moz-transform: translate(110px, 0);
+  -ms-transform: translate(110px, 0);
+  -o-transform: translate(110px, 0);
+  transform: translate(110px, 0);
+  background-color:#C996D9;
+}
+.social ul li:hover i {
+  color: #fff;
+  background: red;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li:hover:nth-of-type(1) i {
+	background:#3C599F;
+}
+.social ul li:hover:nth-of-type(2) i {
+	background:#32CCFE;
+}
+.social ul li:hover:nth-of-type(3) i {
+	background:#a444ea;
+}
+.social ul li:hover:nth-of-type(4) i {
+	background:#0085AE;
+}
+.social ul li:hover:nth-of-type(5) i {
+	background:#dd4b39;
+}
+.social ul li:hover:nth-of-type(1) a {
+	color:#3C599F;
+}
+.social ul li:hover:nth-of-type(2) a {
+	color:#32CCFE;
+}
+.social ul li:hover:nth-of-type(3) a {
+	color:#a444ea;
+}
+.social ul li:hover:nth-of-type(4) a {
+	color:#0085AE;
+}
+.social ul li:hover:nth-of-type(5) a{
+	color:#dd4b39;
+}
+.social ul li i {
+  margin-left: 10px;
+  color: #000;
+  background: #fff;
+  padding: 6px 7px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  background: #ffffff;
+ webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.social ul li:last-child i{
+padding:6px 4px;
+}
+	.navbar-default {
+		background-color:transparent;
+		border-color:transparent;
+	}
+	.navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+       margin: 7.5px 50px 7.5px -15px
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+   
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+	
+	.header{
+	height:100px;
+	background-color:lightblue;
+	}
+	
+	::selection {
+    background: #1ccdca;
+    color: #fff;
+    text-shadow: none;
+}
+
+.copyright{
+	height:auto;
+	color:black;
+	}
+	
+.location{
+height:auto;
+width:100%;
+}
+.navbar-header{
+    top: 0;
+    z-index: 30;
+
+</style>
+
+
+<script type="text/javascript">
+
+function validateName() {
+
+  var name = document.getElementById('contact-name').value;
+
+  if(name.length == 0) {
+
+    producePrompt('Name is required', 'name-error' , 'red')
+    return false;
+
+  }
+
+  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+
+    producePrompt('First and last name, please.','name-error', 'red');
+    return false;
+
+  }
+
+  producePrompt('Valid', 'name-error', 'green');
+  return true;
+
+}
+
+function validatePhone() {
+
+  var phone = document.getElementById('contact-phone').value;
+
+    if(phone.length == 0) {
+      producePrompt('Phone number is required.', 'phone-error', 'red');
+      return false;
+    }
+
+    if(phone.length != 10) {
+      producePrompt('Include area code.', 'phone-error', 'red');
+      return false;
+    }
+
+    if(!phone.match(/^[0-9]{10}$/)) {
+      producePrompt('Only digits, please.' ,'phone-error', 'red');
+      return false;
+    }
+
+    producePrompt('Valid', 'phone-error', 'green');
+    return true;
+
+}
+
+function validateEmail () {
+
+  var email = document.getElementById('contact-email').value;
+
+  if(email.length == 0) {
+
+    producePrompt('Email Invalid','email-error', 'red');
+    return false;
+
+  }
+
+  if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+
+    producePrompt('Email Invalid', 'email-error', 'red');
+    return false;
+
+  }
+
+  producePrompt('Valid', 'email-error', 'green');
+  return true;
+
+}
+
+
+
+function validateForm() {
+  if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage()) {
+    jsShow('submit-error');
+    producePrompt('Please fix errors to submit.', 'submit-error', 'red');
+    setTimeout(function(){jsHide('submit-error');}, 2000);
+  }
+  else {
+
+  }
+}
+
+function jsShow(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function jsHide(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+
+
+
+function producePrompt(message, promptLocation, color) {
+
+  document.getElementById(promptLocation).innerHTML = message;
+  document.getElementById(promptLocation).style.color = color;
+
+
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+		
+		<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header1">
+			<a href="../index.php"><img src="images/jduvit_logo.png" alt="no image logo" class="imglogo"></a>
+			
+			<div class="panel-group" id="menu">
+				<div class="panel">
+				  <div class="panel-heading">
+					<h4 class="panel-title" style="text-align:right;">
+					  <a data-toggle="collapse" href="#collapse1"><i class="fa fa-bars" style="font-size:24px"></i></a>
+					</h4>
+				  </div>
+				  <div id="collapse1" class="panel-collapse collapse" style="background-color:transparent;">
+					<ul class="list-group">
+					<a href="../slider.html"> <li class="list-group-item">Home</li><a>
+					<a href="cources.html"> <li class="list-group-item">Courses</li><a>
+					<a href="new_batches.html"> <li class="list-group-item">New Batches</li><a>
+					<a href="aboutus.html"> <li class="list-group-item">About US</li><a>
+					<a href="contact_us.html"> <li class="list-group-item">Contact US</li><a>
+					</ul>
+				  
+				  </div>
+				</div>
+			</div>
+		</div> -->
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header navbar-fixed-top">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="../index.php"><img src="images/eduvitz_logo.png" alt="no image found" style="width:120px;height:90px; margin-top:-14px;"></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" style="position: absolute;top:50px;color: rgb(255, 255, 255);z-index: 9999; right: 0px !important;" id="bs-example-navbar-collapse-1">
+					  
+					<ul class="nav navbar-nav navbar-right" >
+								<a href="home.html"> <li><font size="5" color="green">Home</font></li>
+								</a>
+								
+								<a href="about.html"> <li><font size="5"color="green">About us</font></li></a>
+								
+								<a href="gett.php"> <li><font size="5" color="green">Courses</font></li></a>
+								
+								
+								<a href="project.html"> <li><font size="5" color="green">Projects</font></li></a>
+								
+								<a href="services.html"> <li><font size="5" color="green">Services</font></li></a>
+								
+								<a href="gallery.html"> <li><font size="5" color="green">Gallery</font></li></a>
+								
+									
+								<a href="indexlms.html"> <li><font size="5" color="green">LMS Project</font></li></a>
+								
+								<a href="contact.html"> <li><font size="5" color="green">Contact US</font></li></a>
+							</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+			
+		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header2">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 head1">
+				<h1 style="color:white;">GET IN TOUCH</h1>
+				<h3 style="color:white;">WE CHERISH ALL INTERACTION</h3>
+			</div>
+			
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 head2">
+			<i class="fa fa-envelope" style="font-size:100px;"></i>&nbsp &nbsp
+			<i class="fa fa-phone-square" style="font-size:100px;"></i>&nbsp &nbsp
+			<i class="fa fa-mobile" style="font-size:110px;"></i>&nbsp
+			<p style="font-size:20px;">Contact Number:- 7702709633. <br> Mail ID:- Info@eduvitz.co.in</p>
+			</div>
+		</div>
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 body1">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 body11">
+				<h3 style="color:#34D9F2"> <i class="fa fa-pencil"></i> &nbsp <strong>CONTACT INFORMATION </strong></h3>
+				<h3 style="color:#34D9F2; ">Head Office :</h3>
+				<p style="color:black; font-size:20px;"> Gate way building 301,<br>4th floor Madhapur, <br>Hyderabad, Telangana 500081, India</p>
+			
+				
+				<br>
+			
+		<div class="social">
+			<ul>
+				<li><a href="https://www.facebook.com/Eduvitz-Technologies-308323603374279/?modal=admin_todo_tour">Facebook <i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com">Twitter <i class="fa fa-twitter"></i></a></li>
+				
+				<li><a href="https://www.instagram.com">Instragram <i class="fa fa-instagram"></i></a></li>
+			
+				<li><a href="https://www.youtube.com">Youtube<i class="fa fa-youtube">
+				</i></a></li>
+
+			<li><a href="https://www.linkedin.com/in/syed-ismail-eduvitz">linkedin<i class="fa fa-linkedin"></i></a></li>
+			</ul>
+		</div>  
+
+			</div>
+			
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 body22">
+				<form class="form-horizontal" action="index.php" method="POST">
+					<h2 style="color:#34D9F2";>&nbsp &nbsp <i class="fa fa-envelope-open"></i>&nbsp &nbsp <strong>GET ON TOUCH</strong></h2><br>				
+					<div class="form-group">
+
+					  <label class="control-label col-sm-2" for="contact-name" >Name:</label>
+					  <div class="col-sm-10">
+						<input type="text" class="form-control" id="contact-name" placeholder="Full Name" name="name" onKeyUp='validateName()'  onBlur='validateName()'>
+					  <span class='error-message' id='name-error'></span>
+					  </div>
+					</div>
+					
+					<div class="form-group">
+					  <label class="control-label col-sm-2" for="contact-email">Email:</label>
+					  <div class="col-sm-10">          
+						<input type="email" class="form-control" id="contact-email" placeholder="Email" name="email" onKeyUp='validateEmail()'onBlur='validateEmail()' >
+					  <span class='error-message' id='email-error'></span>
+					  </div>
+					</div>
+					
+					<div class="form-group">
+					  <label class="control-label col-sm-2" for="contact-phone">Mobile:</label>
+					  <div class="col-sm-10">          
+						<input type="text" class="form-control" id="contact-phone" placeholder="" name="mobile" onKeyUp='validatePhone()' onBlur='validatePhone()'>
+					    <span class='error-message' id='phone-error'></span>
+					  </div>
+					</div>
+					
+					
+					<div class="form-group">
+					 <label class="control-label col-sm-2" for="cname">Courses:</label>
+					<div class="col-sm-10"> 
+					<select class="form-control col-sm-8" id="cname" name="cname" >
+					<option>C language</option>
+					<option>C++ </option>
+					  <option>AWS</option>
+					  <option>RPA</option>
+					  <option>JAVA</option>
+					  <option>JDBC, Servlet, Jsp</option>
+					  <option>Spring</option>
+					  <option>Hibernate</option>
+					  <option>Oracle</option>
+					  <option>AngularJS</option>
+					  <option>Angular 2,4,5,6</option>
+					  <option>Dot Net</option>
+					  <option>DevOps</option>
+					  <option>Python</option>
+					  <option>Hadoop</option>
+					  <option>Data Science</option>
+					  <option>IOT</option>
+					  <option>Machine Learning</option>
+
+					  <option>Web Technologies</option>
+					  <option>Presentation Skills</option>
+					  <option>Interview Skills</option>
+					  <option>Business Etique Skills</option>
+					  <option>Project Managment</option>
+					</select>
+					</div>
+					</div>
+					
+					<div class="form-group">
+					  <label class="control-label col-sm-2" for="comments">Message:</label>
+					  <div class="col-sm-10"> 
+					  <textarea name="comments" class="form-control" rows="5" id='contact-message' ></textarea>
+					   <span class='error-message' id='contact-message'></span>
+					</div>
+					</div>
+					
+					<div class="form-group">        
+					  <div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" name="submit" class="btn btn-info" style="width:100%;" onclick='validateForm()' >Send Your Message </button>
+						 <span class='error-message' id='submit-error'></span>
+					  </div>
+					</div>
+				</form>
+			</div>
+		
+		</div>
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 location">
+		<h3 style="text-align:center;">Our Location</h3>
+		<iframe style="width:100%;height:500px" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=17.4468924,78.3938301 (custom heading)&amp;output=embed"></iframe>
+
+		</div>
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 navbar-fixed-bottom copyright">
+		
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			<h6>Copyright © 2016 Powered By EDZinformatics Pvt. Ltd.</h6>
+			</div>
+			
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:right;">
+			<h6>Designed Eduvitz software Solution.</h6>
+			</div>
+		
+		</div>
+		
+		<!-- Chat HTML Start-->
+		<!-- <div class="row chat-window col-xs-5 col-md-4" id="chat_window_1" style="margin-left:10px;">
+        <div class="col-xs-12 col-md-12">
+        	<div class="panel panel-default">
+                <div class="panel-heading top-bar">
+                    <div class="col-md-8 col-xs-8">
+                        <h3 class="panel-title">Chat</h3>
+                    </div>
+                    <div class="col-md-4 col-xs-4" style="text-align: right;">
+                        <a href="https://www.youtube.com" id="popup"><span  class="glyphicon glyphicon-facetime-video"></span></a>
+                        <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
+                    </div>
+                </div>
+                <div class="panel-body msg_container_base">
+                   
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                        <div class="col-md-10 col-xs-10">
+                            <div class="messages msg_receive">
+                                Hiiiiiii
+                            </div>
+                        </div>
+                    </div>
+					
+					 <div class="row msg_container base_sent">
+                        <div class="col-xs-10 col-md-10">
+                            <div class="messages msg_sent">
+                                
+							   Hello......
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                    </div>
+					
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                        <div class="col-xs-10 col-md-10">
+                            <div class="messages msg_receive">
+                             I want to know about website.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row msg_container base_sent">
+                        <div class="col-xs-10 col-md-10">
+                            <div class="messages msg_sent">
+                                
+							What you wants exactly
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                    </div>
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                        <div class="col-xs-10 col-md-10">
+                            <div class="messages msg_receive">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row msg_container base_sent">
+                        <div class="col-md-10 col-xs-10 ">
+                            <div class="messages msg_sent">
+                               
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                    </div>
+                     <div class="chat_area">
+                        <input class="chat_box" style="    position: relative;
+    float: lw;
+    float: left;
+    width: 85%;
+    height: 40px;
+    border: transparent;" type="text"  placeholder="Write your message here..." />
+                        <span>
+                        <button  id="btn-chat" style="margin-top:7px; color:#1ca8dd; border:none; background:transparent;">Send</button>
+                        </span>
+                    </div>
+                </div>
+            
+    		</div>
+        </div>
+    </div>
+		-->
+		<!-- Chat HTML End -->
+		<a href="#0" class="hm_go_top"></a>
+		</div><!-- Row Close -->
+	</div> <!-- Container Close -->
+	
+	
+	
+	
+<script>
+
+$(document).on('click', '.panel-heading span.icon_minim', function (e) {
+    var $this = $(this);
+    if (!$this.hasClass('panel-collapsed')) {
+        $this.parents('.panel').find('.panel-body').slideUp();
+        $this.addClass('panel-collapsed');
+        $this.removeClass('glyphicon-minus').addClass('glyphicon-plus');
+    } else {
+        $this.parents('.panel').find('.panel-body').slideDown();
+        $this.removeClass('panel-collapsed');
+        $this.removeClass('glyphicon-plus').addClass('glyphicon-minus');
+    }
+});
+$(document).on('focus', '.panel-footer input.chat_input', function (e) {
+    var $this = $(this);
+    if ($('#minim_chat_window').hasClass('panel-collapsed')) {
+        $this.parents('.panel').find('.panel-body').slideDown();
+        $('#minim_chat_window').removeClass('panel-collapsed');
+        $('#minim_chat_window').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+    }
+});
+$(document).on('click', '#new_chat', function (e) {
+    var size = $( ".chat-window:last-child" ).css("margin-left");
+     size_total = parseInt(size) + 400;
+    alert(size_total);
+    var clone = $( "#chat_window_1" ).clone().appendTo( ".container" );
+    clone.css("margin-left", size_total);
+});
+$(document).on('click', '.icon_close', function (e) {
+    //$(this).parent().parent().parent().parent().remove();
+    $( "#chat_window_1" ).remove();
+});
+
+
+
+
+$('.glyphicon-facetime-video').click(function(event) {
+
+      window.open($('#popup_video').attr("href"), "popupWindow", "width=800,height=800,scrollbars=yes");
+      return false;
+  });
+
+</script>
+	<!-- Map Script-->
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+
